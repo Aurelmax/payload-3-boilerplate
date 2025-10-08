@@ -68,7 +68,7 @@ export const Vehicles: CollectionConfig = {
     {
       name: 'originalPrice',
       type: 'number',
-      label: 'Prix d\'origine (€)',
+      label: "Prix d'origine (€)",
     },
     {
       name: 'status',
@@ -77,7 +77,7 @@ export const Vehicles: CollectionConfig = {
         { label: 'Disponible', value: 'disponible' },
         { label: 'Réservé', value: 'reserve' },
         { label: 'Vendu', value: 'vendu' },
-        { label: 'En cours d\'import', value: 'import' },
+        { label: "En cours d'import", value: 'import' },
       ],
       defaultValue: 'disponible',
     },
@@ -141,7 +141,7 @@ export const Vehicles: CollectionConfig = {
         {
           name: 'importCosts',
           type: 'number',
-          label: 'Frais d\'import (€)',
+          label: "Frais d'import (€)",
         },
       ],
     },

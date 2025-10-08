@@ -1,11 +1,14 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres'
 
-import sharp from 'sharp' // sharp-import
 import path from 'path'
 import { buildConfig } from 'payload'
+import sharp from 'sharp' // sharp-import
 import { fileURLToPath } from 'url'
 
+import { defaultLexical } from '@/fields/defaultLexical'
+import { Footer } from './Footer/config'
+import { Header } from './Header/config'
 import { Categories } from './collections/Categories'
 import { Comments } from './collections/Comments'
 import { Media } from './collections/Media'
@@ -15,10 +18,7 @@ import { Services } from './collections/Services'
 import { Testimonials } from './collections/Testimonials'
 import { Users } from './collections/Users'
 import { Vehicles } from './collections/Vehicles'
-import { Footer } from './Footer/config'
-import { Header } from './Header/config'
 import { plugins } from './plugins'
-import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
 
 const filename = fileURLToPath(import.meta.url)
@@ -80,9 +80,9 @@ export default buildConfig({
       path: '/health',
       method: 'get',
       handler: async (req) => {
-        return new Response('OK', { status: 200 });
-      }
-    }
+        return new Response('OK', { status: 200 })
+      },
+    },
   ],
   secret: process.env.PAYLOAD_SECRET,
   sharp,

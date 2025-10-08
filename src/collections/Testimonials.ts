@@ -59,7 +59,7 @@ export const Testimonials: CollectionConfig = {
     {
       name: 'purchaseDate',
       type: 'date',
-      label: 'Date d\'achat',
+      label: "Date d'achat",
     },
     {
       name: 'status',
